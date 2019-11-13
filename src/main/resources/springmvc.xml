@@ -16,7 +16,9 @@
 	<!-- 开启mvc注解 -->
 	<mvc:annotation-driven />
 	<!-- 配置controll层包扫描 -->
-	<context:component-scan base-package="com.zjcds.controller" />
+	<context:component-scan base-package="com.zjcds" />
+	<!--放行静态资源  -->
+	<mvc:default-servlet-handler/>
 	<!-- 配置视图解析器 -->
 	<bean id="internalResourceViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<!-- 配置前缀 -->
@@ -24,10 +26,7 @@
 		<!-- 配置后缀 -->
 		<property name="suffix" value=".jsp"></property>
 	</bean>
-	
-	<!--放行静态资源  -->
-	<mvc:default-servlet-handler/>
-	
+
 	<!-- 配置json注解 -->
 	<bean id="annotationMethodHandlerAdapter" class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
 		<property name="messageConverters">

@@ -40,7 +40,7 @@
 
 	<!-- 扫描dao层中的java接口类 -->
 	<bean id="mapperScannerConfigurer" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.zjcds.dao"></property>
+		<property name="basePackage" value="com.zjcds"></property>
 	</bean>
 
 	<!--3.配置事务 -->
